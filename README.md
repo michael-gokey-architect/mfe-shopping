@@ -13,3 +13,9 @@ Since angular 12 angular CLI uses the webpack 5 so we can easily add the module 
 We see a banner with a shopping cart and an user accounts section, and products all within a shell. The shopping cart is its own app. The products are their own as well. All connected within the shell. 
 
 And lets see now.
+
+
+ssh-keygen -t ed25519 -C "michael.gokey.architect@gmail.com"
+michael.gokey.architect.key
+
+michael.gokey.architect.key.pub.
