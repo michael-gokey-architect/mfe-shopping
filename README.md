@@ -15,7 +15,27 @@ We see a banner with a shopping cart and an user accounts section, and products 
 And lets see now.
 
 
-ssh-keygen -t ed25519 -C "michael.gokey.architect@gmail.com"
-michael.gokey.architect.key
 
-michael.gokey.architect.key.pub.
+
+**Set up the sample app with no tests, just as a sample quick build out**. 
+
+`ng new angular-microfrontend-example --create-application false --minimal
+cd angular-microfrontend-example
+ng g application shell --routing --style css --inline-style
+ng g c products --project shell
+ng g c products/product --project shell --flat
+ng g library shared
+ng g interface product --project shared
+ng g service products --project shared
+ng g service cart --project shared
+ng g application mfe-cart --routing --style css --inline-style
+ng g c home --project mfe-cart
+ng g module cart --project mfe-cart --routing --route cart --module app
+ng add @angular-architects/module-federation --project shell --port 4200
+ng add @angular-architects/module-federation --project mfe-cart --port 4201`
+
+
+
+Future app:
+
+Angular-SpringBoot-CRUD-FullStack-App
