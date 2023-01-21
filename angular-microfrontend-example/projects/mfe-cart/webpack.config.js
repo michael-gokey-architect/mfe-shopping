@@ -3,10 +3,13 @@ const mf = require("@angular-architects/module-federation/webpack");
 const path = require("path");
 const share = mf.share;
 
+
 const sharedMappings = new mf.SharedMappings();
-sharedMappings.register(
-  path.join(__dirname, '../../tsconfig.json'),
-  [/* mapped paths to share */]);
+sharedMappings.register(path.join(__dirname, "../../tsconfig.json"), 
+  [
+    "@shared",
+  ]);
+
 
 module.exports = {
   output: {
@@ -29,11 +32,12 @@ module.exports = {
         library: { type: "module" },
 
         // For remotes (please adjust)
-        // name: "mfeCart",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './projects/mfe-cart/src/app/app.component.ts',
-        // },        
+        name: "mfeCart",
+        filename: "remoteEntry.js",
+        exposes: {
+            // './Component': './projects/mfe-cart/src/app/app.component.ts',
+            './Module': './projects/mfe-cart/src/app/cart/cart.module.ts',
+        },        
         
         // For hosts (please adjust)
         // remotes: {

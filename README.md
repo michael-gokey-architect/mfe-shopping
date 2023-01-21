@@ -51,11 +51,19 @@ ng add @angular-architects/module-federation --project mfe-cart --port 4201`
 You will see the mfe-cart, shared, and shell. 
 In shell you will see the product and products components. 
 In the shared, you will see the library, where the cart service is, products service, shared service is, and the shared component is. 
-The cart is pretty simple by itself. I have not added a User at this time. But tht could be added as an authenicated user via the federation. 
+The cart is pretty simple by itself. I have not added a User at this time. But that could be added as an authenicated user via the federation. 
 
 These applications, mfe-cart and shell, act like, or would have been an angular module in past versions, but are now stand-alone micro front-end apps. The cart could be fully created in ReactJs, or so could the products be extracted and build as ReactJS. This is the key we are looking at now. 
 
 
+### To Run
+Git download, and set up. The CI command is Clean and Install, which is now prefered over a simple npm Install.
+
+`npm ci` 
+
+Next run the 
+
+`npm run run:all`
 
 
 

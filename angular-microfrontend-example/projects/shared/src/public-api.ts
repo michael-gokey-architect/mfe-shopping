@@ -5,3 +5,7 @@
 export * from './lib/shared.service';
 export * from './lib/shared.component';
 export * from './lib/shared.module';
+
+export * from './lib/products.service';
+export * from './lib/product';
+export * from './lib/cart.service';
