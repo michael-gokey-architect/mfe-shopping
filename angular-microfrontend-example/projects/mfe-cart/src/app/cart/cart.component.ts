@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService, Product } from '@shared';
 
-
 interface CartProduct {
   product: Product;
   quantity: number;
 }
-
 
 
 @Component({
@@ -20,7 +18,7 @@ export class CartComponent implements OnInit {
   public items: CartProduct[] = [];
   public totalItems = 0;
 
-  constructor(private cartService: carttService) { }
+  constructor(private cartService: cartService) { }
 
   ngOnInit(): void {
     const basketItems = this.cartService.getCartItems();
